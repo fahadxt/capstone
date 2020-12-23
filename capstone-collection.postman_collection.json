@@ -1,0 +1,1430 @@
+{
+	"info": {
+		"_postman_id": "7cc37d44-e0d9-49fc-94f9-e18b361a42f7",
+		"name": "capstone-collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "public",
+			"item": [
+				{
+					"name": "movies_index",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "e54bdf4a-99d4-4f18-9eec-372a90ce6f52",
+								"exec": [
+									"pm.test(\"Status code is 401\", function () {\r",
+									"    pm.response.to.have.status(401);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/movies",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"movies"
+							]
+						},
+						"description": "endpoint for all available movies in the database"
+					},
+					"response": []
+				},
+				{
+					"name": "actors_index",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "131cd207-38da-4def-9a49-82d7c3cb946b",
+								"exec": [
+									"pm.test(\"Status code is 401\", function () {\r",
+									"    pm.response.to.have.status(401);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/actors",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"actors"
+							]
+						},
+						"description": "endpoint for all available actors in the database"
+					},
+					"response": []
+				},
+				{
+					"name": "movie_store",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "f4e1e128-3f94-4f42-862b-7cadca9c5303",
+								"exec": [
+									"pm.test(\"Status code is 401\", function () {\r",
+									"    pm.response.to.have.status(401);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"sdf2\",\r\n    \"release_date\": \"01-01-2020\"\r\n}"
+						},
+						"url": {
+							"raw": "{{host}}/movies",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"movies"
+							]
+						},
+						"description": "endpoint for new movie (store)"
+					},
+					"response": []
+				},
+				{
+					"name": "actor_store",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "0d46f6e2-aaf4-41ce-a1e4-d87a6588543c",
+								"exec": [
+									"pm.test(\"Status code is 401\", function () {\r",
+									"    pm.response.to.have.status(401);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"sdf2\",\r\n    \"release_date\": \"01-01-2020\"\r\n}"
+						},
+						"url": {
+							"raw": "{{host}}/movies",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"movies"
+							]
+						},
+						"description": "endpoint for new actor (store)"
+					},
+					"response": []
+				},
+				{
+					"name": "movie_update",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "a9cf32bd-3e18-40ef-955f-08fa47ab9e72",
+								"exec": [
+									"pm.test(\"Status code is 401\", function () {\r",
+									"    pm.response.to.have.status(401);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"sdf2\",\r\n    \"release_date\": \"01-01-2020\"\r\n}"
+						},
+						"url": {
+							"raw": "{{host}}/movies/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"movies",
+								"1"
+							]
+						},
+						"description": "endpoint for update a movie"
+					},
+					"response": []
+				},
+				{
+					"name": "actor_update",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "aa860dde-ccbd-459c-b183-7030ad285863",
+								"exec": [
+									"pm.test(\"Status code is 401\", function () {\r",
+									"    pm.response.to.have.status(401);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"fahad2\",\r\n    \"age\": \"29\",\r\n    \"gender\": \"male\"\r\n}"
+						},
+						"url": {
+							"raw": "{{host}}/actors/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"actors",
+								"1"
+							]
+						},
+						"description": "endpoint for update a actors"
+					},
+					"response": []
+				},
+				{
+					"name": "movie_destroy",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "77e6910d-6707-4863-ba37-7aeef2a9a945",
+								"exec": [
+									"pm.test(\"Status code is 401\", function () {\r",
+									"    pm.response.to.have.status(401);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/movies/5",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"movies",
+								"5"
+							]
+						},
+						"description": "endpoint for DELETE a movie by id (destroy)"
+					},
+					"response": []
+				},
+				{
+					"name": "actor_destroy",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "4650605f-2415-497d-8bdb-486e69d7fdf3",
+								"exec": [
+									"pm.test(\"Status code is 401\", function () {\r",
+									"    pm.response.to.have.status(401);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/movies/5",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"movies",
+								"5"
+							]
+						},
+						"description": "endpoint for DELETE a actor by id (destroy) "
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Casting Assistant",
+			"item": [
+				{
+					"name": "movies_index",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "c597204c-7db9-4490-bf25-e84b7d3146cf",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"value contains movies array\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.movies).to.be.an('array')\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/movies",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"movies"
+							]
+						},
+						"description": "endpoint for all available movies in the database"
+					},
+					"response": []
+				},
+				{
+					"name": "actors_index",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "650210f2-76ca-45e7-8a14-f5d71c6db421",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"value contains actors array\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.actors).to.be.an('array')\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/actors",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"actors"
+							]
+						},
+						"description": "endpoint for all available actors in the database"
+					},
+					"response": []
+				},
+				{
+					"name": "movie_store",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "effcf337-74e3-4d48-b4f3-8ddfcee136b8",
+								"exec": [
+									"pm.test(\"Status code is 401\", function () {\r",
+									"    pm.response.to.have.status(401);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"test casting assistant\",\r\n    \"release_date\": \"01-01-2020\"\r\n}"
+						},
+						"url": {
+							"raw": "{{host}}/movies",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"movies"
+							]
+						},
+						"description": "endpoint for new movie (store)"
+					},
+					"response": []
+				},
+				{
+					"name": "actor_store",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "66f59ff5-873f-488c-b2f7-6d2a243acc88",
+								"exec": [
+									"pm.test(\"Status code is 401\", function () {\r",
+									"    pm.response.to.have.status(401);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"test casting assistant\",\r\n    \"release_date\": \"01-01-2020\"\r\n}"
+						},
+						"url": {
+							"raw": "{{host}}/movies",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"movies"
+							]
+						},
+						"description": "endpoint for new actor (store)"
+					},
+					"response": []
+				},
+				{
+					"name": "movie_update",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "d5548f30-a2e0-4d5e-9502-4d1c5018cacd",
+								"exec": [
+									"pm.test(\"Status code is 401\", function () {\r",
+									"    pm.response.to.have.status(401);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"test casting assistant updated\",\r\n    \"release_date\": \"01-01-2020\"\r\n}"
+						},
+						"url": {
+							"raw": "{{host}}/movies/7",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"movies",
+								"7"
+							]
+						},
+						"description": "endpoint for update a movie"
+					},
+					"response": []
+				},
+				{
+					"name": "actor_update",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "ded08dca-02e1-46b7-90db-8b21ca74c581",
+								"exec": [
+									"pm.test(\"Status code is 401\", function () {\r",
+									"    pm.response.to.have.status(401);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"test casting assistant updated\",\r\n    \"age\": \"29\",\r\n    \"gender\": \"male\"\r\n}"
+						},
+						"url": {
+							"raw": "{{host}}/actors/8",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"actors",
+								"8"
+							]
+						},
+						"description": "endpoint for update a actors"
+					},
+					"response": []
+				},
+				{
+					"name": "movie_destroy",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "646f781f-3765-49f9-95eb-2c72cc9a9f49",
+								"exec": [
+									"pm.test(\"Status code is 401\", function () {\r",
+									"    pm.response.to.have.status(401);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/movies/7",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"movies",
+								"7"
+							]
+						},
+						"description": "endpoint for DELETE a movie by id (destroy)"
+					},
+					"response": []
+				},
+				{
+					"name": "actor_destroy",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "ad1f46d7-1445-431d-a964-d8d4f5621bae",
+								"exec": [
+									"pm.test(\"Status code is 401\", function () {\r",
+									"    pm.response.to.have.status(401);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/movies/8",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"movies",
+								"8"
+							]
+						},
+						"description": "endpoint for DELETE a actor by id (destroy) "
+					},
+					"response": []
+				}
+			],
+			"description": "Can view actors and movies",
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImJUTkNzZ2U1MTFDcnYwdFNQT09IWSJ9.eyJpc3MiOiJodHRwczovL2ZhaGFkeHQudXMuYXV0aDAuY29tLyIsInN1YiI6ImF1dGgwfDVmZTBjYmRmZWEzZmM3MDA3ODc2ZDA5NSIsImF1ZCI6ImNhcHN0b25lIiwiaWF0IjoxNjA4Njc1MDYzLCJleHAiOjE2MDg3NjE0NjMsImF6cCI6InlrZk5Ja1U3SFljZGxERGlZN1V0eE9weXhXSGhpVlZxIiwic2NvcGUiOiIiLCJwZXJtaXNzaW9ucyI6WyJnZXQ6YWN0b3JzIiwiZ2V0Om1vdmllcyJdfQ.r9QU7rs9tYs0p5Wn1TmBPTV6xvjuV7Shyk8jWeSNkZT0jXMjBAqkAup-OjQSY_XPBMN9mVNQOAvWCUtrHF9onJA_HaRR5EyQVrXleVth-UUtepi-a5Z7nkFaWwb-n6Zd3qYlUX-tsCoA58fT8Cz243XhV9LInZUwdXO9pfZh-JmO_VFr6ORoYv8yoF59QjCjRJp5-q65L_N7V1xux81l4xAHya1BuINliqYqR1Vpu3kUA5Niu77yOe43XfXFif2zmRKhdjHSryb4DmZ78qykcTlZI_uZIxMm_EiHIlBALzCZIDiTPPn4O-wsPByhrGXqnvc29DSWheFYKh9sqlPYHg",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "4eb56264-b601-4577-8bda-b63c72d585f5",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "cdb1d7f4-fe2e-413f-9c80-3468427d084d",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Casting Director",
+			"item": [
+				{
+					"name": "movies_index",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "52db5523-78b6-4b35-8852-a267acc64d1d",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"value contains movies array\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.movies).to.be.an('array')\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/movies",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"movies"
+							]
+						},
+						"description": "endpoint for all available movies in the database"
+					},
+					"response": []
+				},
+				{
+					"name": "actors_index",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "e9b939fd-5503-48eb-bef6-0c0b37b56a81",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"value contains actors array\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.actors).to.be.an('array')\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/actors",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"actors"
+							]
+						},
+						"description": "endpoint for all available actors in the database"
+					},
+					"response": []
+				},
+				{
+					"name": "movie_store",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "39a673c7-a81f-495f-8dac-6093b8e50362",
+								"exec": [
+									"pm.test(\"Status code is 401\", function () {\r",
+									"    pm.response.to.have.status(401);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"test casting director\",\r\n    \"release_date\": \"01-01-2020\"\r\n}"
+						},
+						"url": {
+							"raw": "{{host}}/movies",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"movies"
+							]
+						},
+						"description": "endpoint for new movie (store)"
+					},
+					"response": []
+				},
+				{
+					"name": "actor_store",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "4841502a-41c9-4112-9420-6c578ea2bf7c",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"age\": \"28\",\r\n    \"gender\": \"male\",\r\n    \"name\": \"test casting director\"\r\n}"
+						},
+						"url": {
+							"raw": "{{host}}/actors",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"actors"
+							]
+						},
+						"description": "endpoint for new actor (store)"
+					},
+					"response": []
+				},
+				{
+					"name": "movie_update",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "95fb3d3e-9001-4819-b230-d937235005bc",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"test casting director updated\",\r\n    \"release_date\": \"09-03-2020\"\r\n}"
+						},
+						"url": {
+							"raw": "{{host}}/movies/7",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"movies",
+								"7"
+							]
+						},
+						"description": "endpoint for update a movie"
+					},
+					"response": []
+				},
+				{
+					"name": "actor_update",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "047695a9-bb48-4e52-94d4-1d89794d1d4c",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"test casting director updated\",\r\n    \"age\": \"36\",\r\n    \"gender\": \"male\"\r\n}"
+						},
+						"url": {
+							"raw": "{{host}}/actors/8",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"actors",
+								"8"
+							]
+						},
+						"description": "endpoint for update a actors"
+					},
+					"response": []
+				},
+				{
+					"name": "movie_destroy",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "87879f1b-f9e9-4c18-b4db-1d062d229bdf",
+								"exec": [
+									"pm.test(\"Status code is 401\", function () {\r",
+									"    pm.response.to.have.status(401);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/movies/7",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"movies",
+								"7"
+							]
+						},
+						"description": "endpoint for DELETE a movie by id (destroy)"
+					},
+					"response": []
+				},
+				{
+					"name": "actor_destroy",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "e4ce8807-d2bc-4073-ad32-0407206b23cb",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/actors/8",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"actors",
+								"8"
+							]
+						},
+						"description": "endpoint for DELETE a actor by id (destroy) "
+					},
+					"response": []
+				}
+			],
+			"description": "- All permissions a Casting Assistant has and…\r\n- Add or delete an actor from the database\r\n- Modify actors or movies",
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImJUTkNzZ2U1MTFDcnYwdFNQT09IWSJ9.eyJpc3MiOiJodHRwczovL2ZhaGFkeHQudXMuYXV0aDAuY29tLyIsInN1YiI6ImF1dGgwfDVmZTBjYzNlNTRlYTIwMDA2OWM3NzZkMCIsImF1ZCI6ImNhcHN0b25lIiwiaWF0IjoxNjA4Njc1MTY5LCJleHAiOjE2MDg3NjE1NjksImF6cCI6InlrZk5Ja1U3SFljZGxERGlZN1V0eE9weXhXSGhpVlZxIiwic2NvcGUiOiIiLCJwZXJtaXNzaW9ucyI6WyJkZWxldGU6YWN0b3JzIiwiZ2V0OmFjdG9ycyIsImdldDptb3ZpZXMiLCJwYXRjaDphY3RvcnMiLCJwYXRjaDptb3ZpZXMiLCJwb3N0OmFjdG9ycyJdfQ.TlTjtH4r5z1k7ftVLdu2ukpNX7I4eXh5mFwj4gB1daLxwXtf2YAXOH0Y8zYof0vX5p80nGHthbaTa2U0JVwPIU3E__Mz2tlabhdpFySBexgG6PIjYLvar6y_OiPlFe1NMHwkWzetGGtskAKCo-NHRXJ7q_ChjYUpotoH4cN8QS1P0Exe05jErvvpuWZQHx4HfPcwMSbQEUmMaIZLmisN2Ohl86fqqegdbYXxy0VvXBtsJ-PfkDf4qx4FAPP_PR8wDP4OhuCi2GcWx4FntkmpfIh734oDRu63N9Z8O1fCpXlziPM0E1ZQcToA5ZF9cA3BV0JVobBDuYZlQhVbAYGYvw",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "d512a6a8-5559-48b9-b9a4-361ac53861d2",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "92ea6188-607f-47e7-a1b9-e066f3eb2ce6",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Executive Producer",
+			"item": [
+				{
+					"name": "movies_index",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "f0dc9fb9-2c20-4093-93bb-5efbd98968d1",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/movies",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"movies"
+							]
+						},
+						"description": "endpoint for all available movies in the database"
+					},
+					"response": []
+				},
+				{
+					"name": "actors_index",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "64e4c0f6-fa35-47ec-be4a-0eb13131b976",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/actors",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"actors"
+							]
+						},
+						"description": "endpoint for all available actors in the database"
+					},
+					"response": []
+				},
+				{
+					"name": "movie_store",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "30c6cc11-befd-4aff-afde-7ad7a1f3d038",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"test executive producer\",\r\n    \"release_date\": \"01-01-2020\"\r\n}"
+						},
+						"url": {
+							"raw": "{{host}}/movies",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"movies"
+							]
+						},
+						"description": "endpoint for new movie (store)"
+					},
+					"response": []
+				},
+				{
+					"name": "actor_store",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "3bf0b4cb-2585-40bb-9b7f-d3ff182a9ee5",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"age\": \"28\",\r\n    \"gender\": \"male\",\r\n    \"name\": \"test executive producer\"\r\n}"
+						},
+						"url": {
+							"raw": "{{host}}/actors",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"actors"
+							]
+						},
+						"description": "endpoint for new actor (store)"
+					},
+					"response": []
+				},
+				{
+					"name": "movie_update",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "fb4bbff6-29d4-4890-84b1-5a81052d83cf",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"test executive producer updated\",\r\n    \"release_date\": \"01-01-2020\"\r\n}"
+						},
+						"url": {
+							"raw": "{{host}}/movies/7",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"movies",
+								"7"
+							]
+						},
+						"description": "endpoint for update a movie"
+					},
+					"response": []
+				},
+				{
+					"name": "actor_update",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "8c3c8cc6-859f-4eb7-adc9-aa79f75f122e",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"test executive producer updated\",\r\n    \"age\": \"36\",\r\n    \"gender\": \"male\"\r\n}"
+						},
+						"url": {
+							"raw": "{{host}}/actors/9",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"actors",
+								"9"
+							]
+						},
+						"description": "endpoint for update a actors"
+					},
+					"response": []
+				},
+				{
+					"name": "movie_destroy",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "f436a84f-72c0-4b8b-86ac-38221e006a5f",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/movies/7",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"movies",
+								"7"
+							]
+						},
+						"description": "endpoint for DELETE a movie by id (destroy)"
+					},
+					"response": []
+				},
+				{
+					"name": "actor_destroy",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "6aa83abd-a53d-4312-9901-a39b230cb37e",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/actors/9",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"actors",
+								"9"
+							]
+						},
+						"description": "endpoint for DELETE a actor by id (destroy) "
+					},
+					"response": []
+				}
+			],
+			"description": "- All permissions a Casting Director has and…\r\n- Add or delete a movie from the database",
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImJUTkNzZ2U1MTFDcnYwdFNQT09IWSJ9.eyJpc3MiOiJodHRwczovL2ZhaGFkeHQudXMuYXV0aDAuY29tLyIsInN1YiI6ImF1dGgwfDVmZTBjYzZiNTY5NmFlMDA3MTJlMTFmYSIsImF1ZCI6ImNhcHN0b25lIiwiaWF0IjoxNjA4Njc1MzAyLCJleHAiOjE2MDg3NjE3MDIsImF6cCI6InlrZk5Ja1U3SFljZGxERGlZN1V0eE9weXhXSGhpVlZxIiwic2NvcGUiOiIiLCJwZXJtaXNzaW9ucyI6WyJkZWxldGU6YWN0b3JzIiwiZGVsZXRlOm1vdmllcyIsImdldDphY3RvcnMiLCJnZXQ6bW92aWVzIiwicGF0Y2g6YWN0b3JzIiwicGF0Y2g6bW92aWVzIiwicG9zdDphY3RvcnMiLCJwb3N0Om1vdmllcyJdfQ.wb44p5tDwGoY-56QsYKYTLTCHZLL4B8XQ59g5ut36-W8v2yqM3OuQREuQJS07g-s7x-7w_YrlWwhyBmHf7xd-01LD2bPzsUlgDmvZ3Ac9g0xOrJRaB-EY2rr-3z6uYvlpKETvGu0PijdMMtFDRR4NYt8fxJjNI8NfgRfpOv0ZISHZJiwdsV6u9j2V3FprxysuPHG7rBopJWDDXWLT2EFWXDH3bgZE2iNXNHQvBRB-4sMwOFDD04zWRLsvNAjzzzS8jyAKhzGk1aXyJN1mT-ood9IDGn_CigFZOmMpG8k9qKdO8mp9KVcvHl_0bN3-5AuDr9N3-9Kx7L59Pq37IO3GA",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "517931b2-6ff5-4d42-9d59-b78094085873",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "84ec1741-7278-4e24-b528-4548017def06",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "dc57f288-c96a-424c-95ca-d1d5fd032702",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "99c3fb66-aa9e-40d6-b231-cfe3df68e168",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "8e65cf7c-afe0-45b6-a979-961fd8a2b8a2",
+			"key": "host",
+			"value": "https://capstone-fahad.herokuapp.com"
+		}
+	],
+	"protocolProfileBehavior": {}
+}
