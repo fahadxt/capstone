@@ -44,6 +44,11 @@ flask run --reload
 
 Setting the `FLASK_ENV` variable to `development` will detect file changes and restart the server automatically.
 
+### URL
+```bash
+https://capstone-fahad.herokuapp.com
+```
+
 ### API ✨
 
 #### `GET` `/movies` 
@@ -233,12 +238,11 @@ Setting the `FLASK_ENV` variable to `development` will detect file changes and r
 ------
     
 
-
-
-    
-
 ### Testing
 To run the tests, run
 ```bash
 python test_app.py
 ```
+
+
+
