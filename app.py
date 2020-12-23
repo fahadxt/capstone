@@ -25,14 +25,6 @@ def create_app(test_config=None):
         return response
 
 
-    # endpoint for index 
-    @app.route('/')
-    def index():
-        return jsonify({
-            'success': True,
-            'msg': 'index',
-        })
-
 
     # endpoint for all available movies
     @app.route('/movies', methods=['GET'])
