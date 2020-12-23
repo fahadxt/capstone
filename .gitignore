@@ -1,6 +1,5 @@
 venv/
 env/
-migrations/
 .vscode/
 __pycache__/
 test.db
